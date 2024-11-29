@@ -16,18 +16,17 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TestPublishGF"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of TestPublishGF."
+  spec.version      = "0.0.3"
+  spec.summary      = "Test for publishing pod,Test for publishing pod,Test for publishing pod,Test for publishing pod"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  spec.description  = "Test for publishing pod,Test for publishing pod,Test for publishing pod,Test for publishing pod"
 
-  spec.homepage     = "http://EXAMPLE/TestPublishGF"
+  spec.homepage     = "https://github.com/scanf3/TestPublishGF"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +37,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -52,9 +51,9 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "gongfeng.gf" => "gongfeng.gf@bytedance.com" }
+  spec.author             = { "scanf3" => "9815447" }
   # Or just: spec.author    = "gongfeng.gf"
-  # spec.authors            = { "gongfeng.gf" => "gongfeng.gf@bytedance.com" }
+  # spec.authors            = { "gongfeng.gf" => "981544717@qq.com" }
   # spec.social_media_url   = "https://twitter.com/gongfeng.gf"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +78,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/TestPublishGF.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/scanf3/TestPublishGF.git", :tag => "0.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "MFramework"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -135,3 +134,4 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
 
 end
+
