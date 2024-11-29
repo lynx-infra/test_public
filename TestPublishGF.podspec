@@ -52,9 +52,9 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "gongfeng.gf" => "gongfeng.gf@bytedance.com" }
+  spec.author             = { "scanf3" => "9815447" }
   # Or just: spec.author    = "gongfeng.gf"
-  # spec.authors            = { "gongfeng.gf" => "gongfeng.gf@bytedance.com" }
+  # spec.authors            = { "gongfeng.gf" => "981544717@qq.com" }
   # spec.social_media_url   = "https://twitter.com/gongfeng.gf"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/TestPublishGF.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/scanf3/TestPublishGF.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "MFramework"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -135,3 +135,4 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
 
 end
+
