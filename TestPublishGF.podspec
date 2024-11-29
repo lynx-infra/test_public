@@ -16,18 +16,17 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TestPublishGF"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of TestPublishGF."
+  spec.version      = "0.0.4"
+  spec.summary      = "For Testing pod release"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
+  spec.description  = "Test for publishing pod,Test for publishing pod,Test for publishing pod,Test for publishing pod"
 
-  spec.homepage     = "http://EXAMPLE/TestPublishGF"
+  spec.homepage     = "https://github.com/scanf3/TestPublishGF"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +37,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = "MIT"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,9 +51,9 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "gongfeng.gf" => "gongfeng.gf@bytedance.com" }
+  spec.author             = { "scanf3" => "9815447" }
   # Or just: spec.author    = "gongfeng.gf"
-  # spec.authors            = { "gongfeng.gf" => "gongfeng.gf@bytedance.com" }
+  # spec.authors            = { "gongfeng.gf" => "981544717@qq.com" }
   # spec.social_media_url   = "https://twitter.com/gongfeng.gf"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -63,7 +62,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
+
+  spec.platform = :ios, '13.0'
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/TestPublishGF.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/scanf3/TestPublishGF.git", :tag => "0.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +89,8 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.swift_version = '5.0'
+  spec.source_files  = "MFramework/**/*"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -135,3 +135,4 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
 
 end
+
