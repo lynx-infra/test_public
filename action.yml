@@ -1,0 +1,14 @@
+name: 'test action'
+description: 'xxx'
+inputs:
+  checkers:  
+    description: 'xxx'
+    required: true
+    default: 'all'
+runs:
+  using: "composite"
+  steps:
+    - name: Run all check
+      run: |
+          echo "hello world"
+      shell: bash
