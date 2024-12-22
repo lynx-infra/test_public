@@ -1,0 +1,40 @@
+name: Publish Pod
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  publish-pod:
+    runs-on: lynx-infra-darwin-14-medium
+    steps:
+      - name: Download Source
+        uses: actions/checkout@v4.2.2
+      - name: Install SSH Key
+        uses: kielabokkie/ssh-key-and-known-hosts-action@v1
+        with:
+          ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY }}
+          ssh-host: github.com
+      - name: Bundle Install
+        run: |-
+          SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk bundle install --path .bundle
+      - name: Generate Source Code Package
+        run: |-
+          export SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+          python3 -m pip install requests PyYAML -i https://pypi.org/simple
+          tools/hab sync
+          source tools/envsetup.sh
+          export REPLACE_SOURCE=true && export PACKAGE_ENV=prod && geniospkg TestPublishGF
+      - name: push to release
+        uses: ncipollo/release-action@v1
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: 'TestPublishGF.zip'
+          tag: ${{ vars.GITHUB_REF }}
+      - name: Push to Specs Repo
+        run: |-
+          pod repo add lynx-infra-specs git@github.com:lynx-infra/Specs.git
+          pod repo push lynx-infra-specs TestPublishGF.podspec --verbose --skip-import-validation --allow-warnings
