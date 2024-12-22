@@ -6,7 +6,7 @@
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -15,18 +15,18 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "TestPublishGF"
-  spec.version      = "0.0.5"
-  spec.summary      = "For Testing pod release"
+  s.name         = "TestPublishGF"
+  s.version      = "0.0.5"
+  s.summary      = "For Testing pod release"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "Test for publishing pod,Test for publishing pod,Test for publishing pod,Test for publishing pod"
+  s.description  = "Test for publishing pod,Test for publishing pod,Test for publishing pod,Test for publishing pod"
 
-  spec.homepage     = "https://github.com/scanf3/TestPublishGF"
+  s.homepage     = "https://github.com/scanf3/TestPublishGF"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -37,8 +37,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -51,7 +51,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "scanf3" => "9815447" }
+  s.author             = { "scanf3" => "9815447" }
   # Or just: spec.author    = "gongfeng.gf"
   # spec.authors            = { "gongfeng.gf" => "981544717@qq.com" }
   # spec.social_media_url   = "https://twitter.com/gongfeng.gf"
@@ -63,7 +63,7 @@ Pod::Spec.new do |spec|
   #
 
 
-  spec.platform = :ios, '13.0'
+  s.platform = :ios, '13.0'
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/scanf3/TestPublishGF.git", :tag => "0.0.5" }
+  s.source={ :git => "https://github.com/scanf3/TestPublishGF.git", :tag => "0.0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,9 +89,9 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  spec.swift_version = '5.0'
-  spec.source_files  = "MFramework/**/*"
-  spec.exclude_files = "Classes/Exclude"
+  s.swift_version = '5.0'
+  s.source_files  = "MFramework/**/*"
+  s.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
